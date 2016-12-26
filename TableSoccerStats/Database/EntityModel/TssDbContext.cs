@@ -8,5 +8,8 @@ namespace TableSoccerStats.Database.EntityModel
 {
     public class TssDbContext : DbContext
     {
+        public TssDbContext() : base("TableSoccerStats") { }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Player> Players{ get; set; }
     }
 }
